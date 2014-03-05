@@ -31,14 +31,16 @@ window.AddWidget(hbox_main_area, vbox1)
 
 button_go_up = Button(hbox_top_buttons, window, "Go Up", "")
 button_go_up.RequestWidth(64)
-button_go_up = Button(hbox_top_buttons, window, "Add Bookmark", "")
-button_go_up.RequestWidth(128)
+button_add_bookmark = Button(hbox_top_buttons, window, "Add Bookmark", "")
+button_add_bookmark.RequestWidth(128)
 window.AddWidget(button_go_up, hbox_top_buttons)
+window.AddWidget(button_add_bookmark, hbox_top_buttons)
 
 vbox_bookmarks = VBox(hbox_main_area, window, [])
 vbox_bookmarks.RequestWidth(100)
 window.AddWidget(vbox_bookmarks, hbox_main_area)
 bookmarks_label = Label(vbox_bookmarks, window, "Bookmarks")
+bookmarks_label.RequestHeight(32)
 window.AddWidget(bookmarks_label, vbox_bookmarks)
 
 # Temporary until we have dynamically-created bookmarks
